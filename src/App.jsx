@@ -86,7 +86,7 @@ let entries = [
               <DiscordInteraction profile="cm" command={true}>cow avatar</DiscordInteraction>
             </div>
             哞!這是 <DiscordMarkdown>`CharlieMoomoo#9491`</DiscordMarkdown> 的頭貼:<br />
-            <img src={charlie} />
+            <img src={charlie} alt=""/>
           </DiscordMessage>
         </DiscordMessages>
       </DiscordOptionsContext.Provider>, key: 'slash'
@@ -100,9 +100,9 @@ export default function App() {
         &nbsp;&nbsp;
         牛牛
         <div id="items">
-          <a className="topbar" href="https://cowdash.cowteam.repl.co/dash" titie="還不能控制AwA" target="_blank">控制面板</a>
+          <a className="topbar" href="https://cowdash.cowteam.repl.co/dash" titie="還不能控制AwA" target="_blank" rel="noreferrer">控制面板</a>
           &nbsp;&nbsp;
-          <a className="topbar" href="https://docs.littlecow.gq" target="_blank">文檔</a>
+          <a className="topbar" href="https://docs.littlecow.gq" target="_blank" rel="noreferrer">文檔</a>
         </div>
       </div>
       <div id="content">

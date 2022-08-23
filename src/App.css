@@ -1,6 +1,6 @@
 @font-face { 
     font-family: "GenSen"; 
-    src: url(src/gensen.woff2); 
+    src: url(gensen.woff2); 
 }
 body {
   margin: 0;
@@ -55,7 +55,7 @@ body {
       rgba(0, 0, 0, 0.2), 
       rgba(0, 0, 0, 0.2)
     ),
-    url(src/background.jpg);
+    url(background.jpg);
   background-repeat: no-repeat;
   background-position: center center;
   background-size: cover;
