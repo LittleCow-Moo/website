@@ -30,6 +30,7 @@ const discordOptions = {
   }
 }
 const songs = ["群青","Counting Stars","I Ain't Worried","Faded"]
+const song = songs[Math.floor(Math.random()*songs.length)]
 let entries = [
   /*{
     label: '基本功能', panel:
@@ -87,7 +88,7 @@ let entries = [
             <div slot="interactions">
               <DiscordInteraction profile="cm" command={true}>moo play</DiscordInteraction>
             </div>
-            ▶️ 哞!正在播放: <DiscordMarkdown>`{songs[Math.floor(Math.random()*songs.length)]}`</DiscordMarkdown>
+            ▶️ 哞!正在播放: <DiscordMarkdown>`{song}`</DiscordMarkdown>
           </DiscordMessage>
         </DiscordMessages>
       </DiscordOptionsContext.Provider>, key: 'music'
