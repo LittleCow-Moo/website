@@ -29,8 +29,9 @@ const discordOptions = {
     }
   }
 }
+const songs = ["群青","Counting Stars","I Ain't Worried","Faded"]
 let entries = [
-  {
+  /*{
     label: '基本功能', panel:
       <DiscordOptionsContext.Provider value={discordOptions}>
         <DiscordMessages>
@@ -51,28 +52,9 @@ let entries = [
         </DiscordMessages>
       </DiscordOptionsContext.Provider>
     , key: 'basic'
-  },
+  },*/
   {
-    label: '音樂功能', panel:
-      <DiscordOptionsContext.Provider value={discordOptions}>
-        <DiscordMessages>
-          <DiscordMessage profile="cm">
-            moo!join
-          </DiscordMessage>
-          <DiscordMessage profile="cow">
-            ✅ 哞!已加入語音頻道!
-          </DiscordMessage>
-          <DiscordMessage profile="cm">
-            moo!play 群青
-          </DiscordMessage>
-          <DiscordMessage profile="cow">
-            ▶️ 哞!正在播放: <DiscordMarkdown>`群青`</DiscordMarkdown>
-          </DiscordMessage>
-        </DiscordMessages>
-      </DiscordOptionsContext.Provider>, key: 'music'
-  },
-  {
-    label: '斜線指令', panel:
+    label: '基本功能', panel:
       <DiscordOptionsContext.Provider value={discordOptions}>
         <DiscordMessages>
           <DiscordMessage profile="cow">
@@ -89,7 +71,26 @@ let entries = [
             <img src={charlie} alt=""/>
           </DiscordMessage>
         </DiscordMessages>
-      </DiscordOptionsContext.Provider>, key: 'slash'
+      </DiscordOptionsContext.Provider>, key: 'basic'
+  },
+  {
+    label: '音樂功能', panel:
+      <DiscordOptionsContext.Provider value={discordOptions}>
+        <DiscordMessages>
+          <DiscordMessage profile="cow">
+            <div slot="interactions">
+              <DiscordInteraction profile="cm" command={true}>moo join</DiscordInteraction>
+            </div>
+            ✅ 哞!已加入語音頻道!
+          </DiscordMessage>
+          <DiscordMessage profile="cow">
+            <div slot="interactions">
+              <DiscordInteraction profile="cm" command={true}>moo play</DiscordInteraction>
+            </div>
+            ▶️ 哞!正在播放: <DiscordMarkdown>`{songs[Math.floor(Math.random()*songs.length)]}`</DiscordMarkdown>
+          </DiscordMessage>
+        </DiscordMessages>
+      </DiscordOptionsContext.Provider>, key: 'music'
   }
 ]
 export default function App() {
