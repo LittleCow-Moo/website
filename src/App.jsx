@@ -88,7 +88,7 @@ let entries = [
             <div slot="interactions">
               <DiscordInteraction profile="cm" command={true}>moo play</DiscordInteraction>
             </div>
-            ▶️ 哞!正在播放: <DiscordMarkdown>`{song}`</DiscordMarkdown>
+            <DiscordMarkdown>▶️ 哞!正在播放: `{song}`</DiscordMarkdown>
           </DiscordMessage>
         </DiscordMessages>
       </DiscordOptionsContext.Provider>, key: 'music'
